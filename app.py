@@ -312,29 +312,27 @@ def upload_image():
             contents=[
                 "Describe this image in detail.",
                 image
-            ]
+            ]   
         )
+
         print("========== GEMINI RESPONSE ==========")
-print(response)
-print("--------------------------------------")
-print("TEXT:", response.text)
-print("======================================")
+        print(response)
+        print("--------------------------------------")
+        print("TEXT:", response.text)
+        print("======================================")
 
         return jsonify({
             "success": True,
             "reply": response.text
         })
-
+    
     except Exception as e:
         import traceback
-
         traceback.print_exc()
 
         return jsonify({
             "success": False,
             "error": str(e)
         }), 500
-      
-    
 if __name__ == "__main__":
     app.run(debug=True)
