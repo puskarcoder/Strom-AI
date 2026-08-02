@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-circle">
+                    AI
+                </div>
+
+                <h2>Puskar's AI</h2>
+
+            </div>
+
+            <button class="new-chat" id="new-chat">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Chat
+
+            </button>
+
+            <div class="history">
+
+                <h3>Recent Chats</h3>
+
+                <div id="history-list">
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="bottom-menu">
+
+                <div class="menu-item">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </div>
+
+                <div class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i>
+                    Help
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- Main Area -->
+
+        <main class="main">
+
+            <!-- Header -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Puskar's AI Assistant </h1>
+
+                    <p>Your Artifical Sathi To fix the Problem </p>
+
+                </div>
+
+                <div class="profile">
+
+                    <div class="status"></div>
+
+                    Online
+
+                </div>
+
+            </header>
+
+            <!-- Chat -->
+
+            <section id="chat-box" class="chat-box">
+
+                <div class="bot-message">
+
+                    <div class="avatar ai">
+
+                        AI
+
+                    </div>
+
+                    <div class="message">
+
+                        👋 Hello! I'm Strom AI.
+
+                        Ask me anything about programming,
+                        web development, Python,
+                        AI, or technology.
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Input -->
+
+            <footer class="chat-input">
+
+                <button id="attach">
+                    <i class="fa-solid fa-paperclip"></i>
+                </button>
+                <input type="file" id="fileInput" accept="image/*,.pdf,.txt,.doc,.docx" hidden>
+
+                <input type="text" id="message" placeholder="Message Strom AI...">
+
+                <button id="mic">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+
+                <button id="send">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+            </footer>
+
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
